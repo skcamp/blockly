@@ -216,6 +216,7 @@ Blockly.WorkspaceSvg.prototype.dispose = function() {
   }
   if (this.injectChangeListenerHandle_) {
     this.removeChangeListener(this.injectChangeListenerHandle_);
+    this.injectChangeListenerHandle_ = null;
   }
 };
 
