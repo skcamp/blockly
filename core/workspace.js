@@ -56,6 +56,7 @@ Blockly.Workspace.prototype.rendered = false;
  */
 Blockly.Workspace.prototype.dispose = function() {
   this.clear();
+  stratego.util.unmark('Workspace');
 };
 
 /**

@@ -47,6 +47,7 @@ goog.require('goog.userAgent');
  * @constructor
  */
 Blockly.WorkspaceSvg = function(options) {
+  stratego.util.mark('WorkspaceSvg');
   Blockly.WorkspaceSvg.superClass_.constructor.call(this, options);
   this.getMetrics = options.getMetrics;
   this.setMetrics = options.setMetrics;
@@ -227,6 +228,7 @@ Blockly.WorkspaceSvg.prototype.dispose = function() {
     // Top-most workspace.  Dispose of the SVG too.
     goog.dom.removeNode(this.options.svg);
   }
+  stratego.util.unmark('WorkspaceSvg');
 };
 
 /**
