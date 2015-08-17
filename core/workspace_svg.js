@@ -214,6 +214,9 @@ Blockly.WorkspaceSvg.prototype.dispose = function() {
     // Top-most workspace.  Dispose of the SVG too.
     goog.dom.removeNode(this.options.svg);
   }
+  if (this.injectChangeListenerHandle_) {
+    this.removeChangeListener(this.injectChangeListenerHandle_);
+  }
 };
 
 /**

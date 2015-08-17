@@ -429,7 +429,7 @@ Blockly.createMainWorkspace_ = function(svg, options) {
         }
       }
     };
-    mainWorkspace.addChangeListener(workspaceChanged);
+    mainWorkspace.injectChangeListenerHandle_ = mainWorkspace.addChangeListener(workspaceChanged);
   }
   // The SVG is now fully assembled.
   Blockly.svgResize(mainWorkspace);
