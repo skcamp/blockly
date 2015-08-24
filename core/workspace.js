@@ -36,6 +36,7 @@ goog.require('goog.math');
  * @constructor
  */
 Blockly.Workspace = function(opt_options) {
+  stratego.util.mark('Workspace');
   /** @type {!Object} */
   this.options = opt_options || {};
   /** @type {boolean} */
